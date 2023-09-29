@@ -10,10 +10,10 @@ import frc.robot.commands.Autos;
 import frc.robot.Constants.IntakeConstants;
 // import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.ArcadeDriveCommand;
-import frc.robot.commands.IntakeBackwardCommand;
-import frc.robot.commands.IntakeForwardCommand;
-import frc.robot.commands.PivotBackwardCommand;
-import frc.robot.commands.PivotForwardCommand;
+import frc.robot.commands.IntakeOutCommand;
+import frc.robot.commands.IntakeInCommand;
+import frc.robot.commands.PivotUpCommand;
+import frc.robot.commands.PivotDownCommand;
 import frc.robot.commands.DefaultIntakeCommand;
 
 import frc.robot.subsystems.Drivetrain;
@@ -56,10 +56,10 @@ public class RobotContainer {
    */
   private void configureBindings() {
 
-    OI.m_coPilotXbox.b().whileTrue(new IntakeForwardCommand(m_intake));
-    OI.m_coPilotXbox.a().whileTrue(new IntakeBackwardCommand(m_intake));
-    OI.m_coPilotXbox.x().whileTrue(new PivotBackwardCommand(m_intake));
-    OI.m_coPilotXbox.y().whileTrue(new PivotForwardCommand(m_intake));
+    OI.m_coPilotXbox.b().whileTrue(new IntakeInCommand(m_intake));
+    OI.m_coPilotXbox.a().whileTrue(new IntakeOutCommand(m_intake));
+    OI.m_coPilotXbox.x().whileTrue(new PivotUpCommand(m_intake));
+    OI.m_coPilotXbox.y().whileTrue(new PivotDownCommand(m_intake));
   }
 
   /**

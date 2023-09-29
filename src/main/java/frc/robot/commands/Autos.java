@@ -20,6 +20,11 @@ public final class Autos {
     return new DistanceDriveCommand(drivetrain, AutoConstants.TAXI_AUTO_TARGET_DISTANCE);
   }
 
+  public static Command shootTaxiAuto(Intake intake, Drivetrain drivetrain) {
+    return Commands.sequence(new PivotDownCommand(intake), new IntakeOutTimedCommand(intake), Commands.parallel(
+        new PivotUpCommand(intake), new DistanceDriveCommand(drivetrain, -AutoConstants.TAXI_AUTO_TARGET_DISTANCE)));
+  }
+
   private Autos() {
     throw new UnsupportedOperationException("This is a utility class!");
   }
