@@ -21,7 +21,7 @@ public final class Autos {
   }
 
   public static Command shootTaxiAuto(Intake intake, Drivetrain drivetrain) {
-    return Commands.sequence(new PivotDownCommand(intake), new IntakeOutTimedCommand(intake), Commands.parallel(
+    return Commands.sequence(new PivotDownCommand(intake), new IntakeOutTimedCommand(intake, AutoConstants.INTAKE_TIME), Commands.parallel(
         new PivotUpCommand(intake), new DistanceDriveCommand(drivetrain, -AutoConstants.TAXI_AUTO_TARGET_DISTANCE)));
   }
 
