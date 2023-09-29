@@ -10,9 +10,11 @@ import edu.wpi.first.wpilibj.Timer;
 public class IntakeOutTimedCommand extends Command {
     private Intake m_intake;
     private Timer m_timer = new Timer();
+    private double m_time;
 
-    public IntakeOutTimedCommand(Intake intake){
+    public IntakeOutTimedCommand(Intake intake, double time){ // takes in the number of seconds we want the intake to run for
         m_intake = intake;
+        m_time = time;
         addRequirements(intake);
     }
 
@@ -36,6 +38,6 @@ public class IntakeOutTimedCommand extends Command {
 
     @Override
     public boolean isFinished() {
-        return m_timer.get() >= 5.0;
+        return m_timer.get() >= m_time;
     }
 }
