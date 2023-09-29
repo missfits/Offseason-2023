@@ -35,8 +35,8 @@ public final class Constants {
     public static final int INTAKE_MOTOR_PORT = 6; // pulled from 2023 robot code
     public static final int PIVOT_MOTOR_PORT = 8; // same as above
 
-    public static final double INTAKE_MOTOR_SPEED_FORWARD = 0.4; // default value 0.6, lower to prevent cubes from breaking
-    public static final double INTAKE_MOTOR_SPEED_BACKWARD = -0.6;
+    public static final double INTAKE_MOTOR_SPEED_IN = 0.4; // default value 0.6, lower to prevent cubes from breaking
+    public static final double INTAKE_MOTOR_SPEED_OUT = -0.6;
     public static final double INTAKE_MOTOR_SPEED_DEFAULT = 0.05;
 
     public static final double PIVOT_MOTOR_SPEED = 0.2;

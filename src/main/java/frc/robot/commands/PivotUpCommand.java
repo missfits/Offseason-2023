@@ -5,22 +5,21 @@ import frc.robot.subsystems.Intake;
 
 import frc.robot.Constants.IntakeConstants;
 
-public class PivotForwardCommand extends Command{
-    private double m_encoderStart;
+public class PivotUpCommand extends Command {
     private Intake m_intake;
 
-    public PivotForwardCommand(Intake intake){
+    public PivotUpCommand(Intake intake){
         m_intake = intake;
     }
 
     @Override
     public void initialize() {
         m_encoderStart = m_intake.getPivotEncoderPosition();
-    }  
+    }
 
     @Override
     public void execute() {
-        m_intake.runPivotIntakeMotor(IntakeConstants.PIVOT_MOTOR_SPEED);
+        m_intake.runPivotIntakeMotor(-IntakeConstants.PIVOT_MOTOR_SPEED);
     }
 
     @Override
@@ -30,7 +29,7 @@ public class PivotForwardCommand extends Command{
 
     @Override
     public boolean isFinished() {
-        return m_intake.getPivotEncoderPosition() >= m_encoderStart + IntakeConstants.PIVOT_DELTA;
-        // return m_intake.getPivotEncoderPosition() >= IntakeConstants.PIVOT_DOWN_POSITION;
+        return m_intake.getPivotEncoderPosition() <= m_encoderStart - IntakeConstants.PIVOT_DELTA;
+        // return m_intake.getPivotEncoderPosition() <= IntakeConstants.PIVOT_UP_POSITION;
     }
 }
