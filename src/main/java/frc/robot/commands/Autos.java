@@ -17,7 +17,7 @@ public final class Autos {
   }
 
   public static Command taxiAuto(Drivetrain drivetrain) {
-    return new DistanceDriveCommand(drivetrain, AutoConstants.TAXI_AUTO_TARGET_DISTANCE);
+    return new DistanceDriveCommand(drivetrain, -AutoConstants.TAXI_AUTO_TARGET_DISTANCE);
   }
 
   public static Command shootTaxiAuto(Intake intake, Drivetrain drivetrain) {
