@@ -52,8 +52,8 @@ public final class Constants {
   }
 
   public static class AutoConstants {
-    public static final double TAXI_AUTO_TARGET_DISTANCE = 25; // (temp) distance (in rotations of encoder) to travel (can be both neg + pos) // tentatively 
-    public static final double TAXI_AUTO_SPEED = 0.25; // (temp) speed of robot during taxi auto 
+    public static final double TAXI_AUTO_TARGET_DISTANCE = 74; // distance (in rotations of encoder) to travel (can be both neg + pos) // tentatively 
+    public static final double TAXI_AUTO_SPEED = 0.7; // speed of robot during taxi auto 
     public static final double INTAKE_TIME = 5.0; //TO DO: test, this is the amount of time we outtake the cube into the slot before driving
   }
 }
