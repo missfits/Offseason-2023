@@ -7,6 +7,7 @@ import frc.robot.Constants.IntakeConstants;
 
 public class PivotUpCommand extends Command {
     private Intake m_intake;
+    private double m_encoderStart;
 
     public PivotUpCommand(Intake intake){
         m_intake = intake;
