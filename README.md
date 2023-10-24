@@ -9,3 +9,4 @@ Put your name here!
 - riley
 - tori
 - paimon
+- lumine
